@@ -15,4 +15,11 @@ describe(Contact) do
       expect(test_contact.last_name()).to(eq('Cornelis'))
     end
   end
+
+  describe('#birth_month') do
+    it('returns teh month that the contact was born') do
+      test_contact = Contact.new({:birth_month => 'April'})
+      expect(test_contact.birth_month()).to(eq('April'))
+    end
+  end
 end
