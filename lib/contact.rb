@@ -1,4 +1,6 @@
 class Contact
+  @@contacts = []
+
   attr_reader(:first_name, :last_name, :birth_month, :phones )
 
   define_method(:initialize) do |attributes|
@@ -14,9 +16,12 @@ class Contact
     @phones<<phone
   end
 
+  def save
+    @@contacts.push(self)
+  end
 
-
-
-
+  def self.all
+    @@contacts
+  end
 
 end
