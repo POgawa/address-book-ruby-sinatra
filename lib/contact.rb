@@ -33,4 +33,8 @@ class Contact
     end
   end
 
+  def self.clear
+    @@contacts = []
+  end
+
 end
