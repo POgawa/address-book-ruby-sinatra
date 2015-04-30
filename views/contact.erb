@@ -1,0 +1,17 @@
+<h1>Contact information</h1>
+
+
+<h2>Name: <%= @contact.first_name %> <%= @contact.last_name%></h2>
+
+<h2>Birth month: <%= @contact.birth_month%></h2>
+
+<% unless @contact.phones.empty? %>
+ <h1>Phone numbers:</h1>
+   <ul>
+     <% @contact.phones.each do |phone| %>
+       <li><%= phone.area_code %><%= phone.number %></li>
+     <% end %>
+   </ul>
+<% end %>
+
+<a href="/newphone/<%= @contact.id %>" class='btn btn-info' role='button'>Add a phone number</a>

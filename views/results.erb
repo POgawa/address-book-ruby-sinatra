@@ -1,0 +1,7 @@
+<% if @phone == nil %>
+  <h1>You've successfully added <%= @contact.first_name %> as a contact!</h1>
+<% else %>
+  <h1>You've successfully added the number <%= @phone.area_code %><%= @phone.number %> to <%= @contact.first_name %></h1>
+<% end %>
+
+<a href="/">Return to Address Book</a>
